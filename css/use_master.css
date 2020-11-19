@@ -96,6 +96,62 @@
   color: #cfcfcf;
   text-align: center;
 }
+.art #lis {
+  width: 1010px;
+  margin: 0 auto;
+}
+.art #lis li {
+  width: 220px;
+  height: 286px;
+  float: left;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  margin: 15px;
+  position: relative;
+}
+.art #lis li img {
+  height: 130px;
+}
+.art #lis li .show {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 23px;
+  background-color: #ff5732;
+  text-align: center;
+  color: #ffffff;
+  line-height: 23px;
+  border-radius: 5px;
+}
+.art #lis li p:nth-of-type(1) {
+  font-size: 16px;
+  text-align: center;
+  height: 60px;
+}
+.art #lis li .number {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.art #lis li .number span {
+  width: 48px;
+  height: 23px;
+  font-size: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+}
+.art #lis li p:nth-of-type(2) {
+  font-size: 12px;
+  color: #ff4840;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.art #lis li p:nth-of-type(3) {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-align: center;
+}
 .more {
   width: 100%;
   margin-top: 40px;

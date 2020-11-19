@@ -30,14 +30,17 @@ $('#but').on('click',function(){
         },
         success:function(data){
             console.log(data)
-            alert(data.msg)
+            // alert(data.msg)
+            if(data.status == 200 ){
+                window.open('./index.html');
+            }
         },
         dataType:'json',
     })
 })
-$('input').on('focus',function(){
-    $(this).val('')
-})
+// $('input').on('focus',function(){
+//     $(this).val('')
+// })
 // 正则验证
 tel.onblur = function(){
     var reg = /^[1][34578]\d{9}/g;

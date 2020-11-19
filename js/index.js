@@ -32,6 +32,7 @@ function auto() {
     }, 3000);
 }
 auto();
+//登录
 $('#deng').on('click', function() {
     $('.hide').css('display', 'block');
 });
@@ -57,6 +58,9 @@ $('#denglu').on('click', function() {
 window.onscroll = function(){
     if(document.documentElement.scrollTop>300){
         $('#anchor').fadeIn(2000)
+    }
+    else if(document.documentElement.scrollTop<300){
+        $('#anchor').fadeOut(500)
     }
 }
 
