@@ -1,9 +1,11 @@
 // 点击样式
 $('.nav').find('a').on('click',function(){
-    $('.nav').find('a').removeClass('light')
-    $(this).addClass('light')
+  $('.nav').find('a').removeClass('light')
+  $(this).addClass('light')
 })
 // 数据请求
+function aj(){
+
 if(window.XMLHttpRequest){
   var ajax_ = new XMLHttpRequest();
 }
@@ -19,7 +21,24 @@ else{
       data = JSON.parse(data);
       console.log(data);
 
+
+
       var dot_tem = doT.template(document.getElementById('list_template').innerText);
       list.innerHTML = dot_tem(data);
+
+      $('.more #xia').show()
+      $('.more #yuan').hide()
+
     }
 }
+}
+aj();
+//点击加载更多
+$('.more').on('click',function(){
+$('#xia').hide();
+$('#yuan').show();
+var lis = $('#lis').html()
+lis += $('#list').html()
+$('#lis').html(lis);
+aj()
+})

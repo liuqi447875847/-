@@ -3,58 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>酷玩</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/play_hot.css">
-    <script src="../js/doT.js"></script>
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/register.css">
 </head>
 <body>
     <header class="header">
         <div class="header_top clearfix">
             <div class="header_left">
-                <img src="../img/logonew.png">
+                <img src="./img/logonew.png">
                 <ul>
-                    <li class="lis"><a href="">首页</a></li>
-                    <li class="lis"><a href="" style="color:#ff5339;">酷玩</a></li>
-                    <li class="lis"><a href="">导购</a></li>
-                    <li class="lis"><a href="">试用</a></li>
-                    <li class="lis"><a href="">报告</a></li>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">酷玩</a></li>
+                    <li><a href="">导购</a></li>
+                    <li><a href="">试用</a></li>
+                    <li><a href="">报告</a></li>
                 </ul>
             </div>
             <div class="header_right">
-                <img src="../img/search.png">
+                <img src="./img/search.png">
                 <button class="but">注册</button>
             </div>
         </div>
         <div class="header_bottom"></div>
     </header>
-    <!-- 标题 -->
-    <p class="title">发现酷玩</p>
-    <nav class="nav clearfix">
-        <p class="clearfix">
-            <a href="./play_new.html">最新</a>
-            <a href="" class="light">最热</a>
-            <a href="./play_class.html">品类</a>
-        </p>
-    </nav>
-   <!-- 正文 -->
-   <ul id="lis"></ul>
-   <ul id="list" class="clearfix">
+    <!-- 注册正文 -->
+    <article class="article">
+        <div action="" class="art">
+                <p class="art_title">注册极果</p>
+                <input type="text" id="tel" class="inputs" value="请输入登陆手机号">
+                <div class="in clearfix">
+                    <input type="text" id="check" class="inp" value="请输入图片效验码">
+                    <img src="./img/imgCode.jpg" alt="" class="xiaoyan">
+                </div>
+                <div class="in clearfix">
+                    <input type="text" id="verify" class="inp" value="请输入4位数字验证码">
+                    <p id="yanzheng">获取验证码</p>
+                </div>
+                <input type="text" id="user" class="inputs" value="请输入用户名">
+                <input type="password" id="pass" class="inputs" value="请输入密码">
+                <input type="password" id="repass" class="inputs" value="确认密码">
+            <button id="but">立即注册</button>
+        </div>
+    </article>
 
-   </ul>
-   <div class="more" id="more">
-       <img src="../img/loading-icon.gif" id="yuan">
-       <img src="../img/more.png" id="xia">
-       <span href="">点击加载更多</span>
-   </div>
     <!-- 尾部 -->
     
     <footer class="footer">
         <div class="footer_top clearfix">
-            <img src="../img/code.png" class="code">
+            <img src="./img/code.png" class="code">
             <div class="footer_left">
-                <img src="../img/logoImg.jpg" alt="">
+                <img src="./img/logoImg.jpg" alt="">
                 <p>全球酷玩试用导购平台酷·新奇·好玩·品质</p>
                 <p>微信添加“JguoJguo”获取我们的服务。</p>
             </div>
@@ -104,27 +104,6 @@
         </div>
     </footer>
 </body>
-<script src="../js/jquery-3.5.1.js"></script>
-<!-- 模板 -->
-<script id="list_template" type="text/x-dot-template">
-    {{~ it:value:index}}
-    <li>
-        <img src={{=value.img}} alt="">
-        <div class="box">
-            <p>{{=value.text}}</p>
-            <div class="like clearfix">
-                <p>
-                    <img src="../img/xin.png">
-                    <span>{{=value.like}}</span>
-                    <img src="../img/zan.png">
-                    <span>{{=value.words}}</span>
-                </p>
-            </div>
-            <img src="../img/listbg.jpg" class="but">
-        </div>
-    </li>
-    {{~ }}
-</script>
-<script src="../js/play_hot.js"></script>
-<script src="../js/public.js"></script>
+<script src="./js/jquery-3.5.1.js"></script>
+<script src="./js/register.js"></script>
 </html>

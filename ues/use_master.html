@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>酷玩</title>
+    <title>试用</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/play_hot.css">
+    <link rel="stylesheet" href="../css/use_master.css">
     <script src="../js/doT.js"></script>
 </head>
 <body>
@@ -16,9 +16,9 @@
                 <img src="../img/logonew.png">
                 <ul>
                     <li class="lis"><a href="">首页</a></li>
-                    <li class="lis"><a href="" style="color:#ff5339;">酷玩</a></li>
+                    <li class="lis"><a href="">酷玩</a></li>
                     <li class="lis"><a href="">导购</a></li>
-                    <li class="lis"><a href="">试用</a></li>
+                    <li class="lis"><a href="" style="color:#ff5339;">试用</a></li>
                     <li class="lis"><a href="">报告</a></li>
                 </ul>
             </div>
@@ -30,19 +30,24 @@
         <div class="header_bottom"></div>
     </header>
     <!-- 标题 -->
-    <p class="title">发现酷玩</p>
+    <p class="title">免费试用</p>
     <nav class="nav clearfix">
         <p class="clearfix">
-            <a href="./play_new.html">最新</a>
-            <a href="" class="light">最热</a>
-            <a href="./play_class.html">品类</a>
+            <a href="./use.html">大众试用</a>
+            <a href="javascript:void(0)" class="light">体验师专项</a>
         </p>
     </nav>
+    <div class="nav_s">
+        <span class="all black">全部</span>
+        <span class="applying">申请中</span>
+        <span class="useing">试用中</span>
+        <span class="over">已结束</span>
+    </div>
    <!-- 正文 -->
-   <ul id="lis"></ul>
-   <ul id="list" class="clearfix">
-
-   </ul>
+   <div class="art">
+    <ul id="lis"></ul>
+    <ul id="list" class="clearfix"></ul>
+   </div>
    <div class="more" id="more">
        <img src="../img/loading-icon.gif" id="yuan">
        <img src="../img/more.png" id="xia">
@@ -108,23 +113,21 @@
 <!-- 模板 -->
 <script id="list_template" type="text/x-dot-template">
     {{~ it:value:index}}
-    <li>
-        <img src={{=value.img}} alt="">
-        <div class="box">
+        {{? value.info_ty == '体验师转享'}}
+        <li>
+        <img src="../img/hot5.jpg" alt="">
+        <div class="show">{{=value.info_ty}}</div>
             <p>{{=value.text}}</p>
-            <div class="like clearfix">
-                <p>
-                    <img src="../img/xin.png">
-                    <span>{{=value.like}}</span>
-                    <img src="../img/zan.png">
-                    <span>{{=value.words}}</span>
-                </p>
+            <div class="number">
+                <span>{{=value.totalnum}}</span>
+                <span>{{=value.num}}台</span>
             </div>
-            <img src="../img/listbg.jpg" class="but">
-        </div>
-    </li>
+            <p>{{=value.apply}}申请</p>
+            <p>{{=value.endTime}}</p>
+        </li>
+        {{?}}
     {{~ }}
 </script>
-<script src="../js/play_hot.js"></script>
+<script src="../js/use_master.js"></script>
 <script src="../js/public.js"></script>
 </html>
